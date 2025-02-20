@@ -164,7 +164,18 @@ public class activitat {
 			System.out.println("Usuario finaliza la compra");
 			// Codigo para finalizar la compra y que salga el total de la compra
 			
+			int totalCompra = 0;
 			
+			for (int i = 0; i < hierba.length; i++) {
+				if (hierba[i] != null) {
+					totalCompra += precio[i];
+				}
+				
+			}
+			
+			System.out.println("el total de la compra es de " + (totalCompra /100));
+			
+			scanner.close();
 		}
 		
 		//Funciones extra que considereis necesarias
