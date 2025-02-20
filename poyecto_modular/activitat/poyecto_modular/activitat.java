@@ -24,10 +24,10 @@ public class activitat {
 			// Codigo para buscar por nombre
 			
 			System.out.println("Dime el nombre de la hierba quequieres buscar: ");
-			String nombre1 = scanner.nextLine();
+			
 			
 			for (int i = 0; i < hierba.length; i++) {
-				if (hierba[i].equals(nombre1)) {
+				if (hierba[i].equals(nombre)) {
 					System.out.println("Encontrado " + hierba[i]);
 					System.out.println("Origen: " + origen[i]);
 					System.out.println("Precio" + precio[i]);
@@ -41,15 +41,52 @@ public class activitat {
 				System.out.println("No se encontro ninguna hierba con este nombre ");
 				
 			
-			}
-						
+			}			
 			
 			System.out.println("Usuario selecciona buscar por origen");
 			lugar = "Andorra";
 			// Codigo para buscar por origen
 
+			for (int i = 0; i < origen.length; i++) {
+				if(origen[i].equals(lugar)) {
+				System.out.println("Hierba encontrada" + hierba[i]);
+				System.out.println("Origen: " + origen[i]);
+				System.out.println("Precio" + precio[i]);
+			}
+		}
+			System.out.println("No se encontro ninguna hierba en ese origen");
+		
+			
 			System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
 			// Codigo para ordenar de mayor a menor precio
+			
+			for (int i = 0; i < precio.length - 1; i++) {
+				for (int j = 0; j < precio.length; j++) {
+					if (precio[i] > precio[j]) {
+						
+						precio [i] = precio [i] + precio [j];
+						precio [j] = precio [i] - precio[j];
+						precio [i] = precio [i] - precio [j];
+						
+						String ordenar = hierba[i];
+						
+						hierba[i] = hierba[j];
+						hierba[j] = ordenar; 
+						
+						ordenar = origen [i];
+						origen[i] = origen[i];
+						origen[j] = ordenar;
+					}
+					
+				}
+				
+			}
+			
+			System.out.println("Orden de hierbas por precio de menor a mayor");
+			for (int i = 0; i < hierba.length; i++) {
+				System.out.println(hierba[i] + origen[i] + precio[i]);
+				
+			}
 
 			System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
 			// Codigo para ordenar de mayor a menor precio
