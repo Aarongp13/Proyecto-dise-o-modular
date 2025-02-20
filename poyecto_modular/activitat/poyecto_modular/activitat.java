@@ -146,10 +146,25 @@ public class activitat {
 			System.out.println("Usuario elimina el segundo elemento de su carrito");
 			// Codigo para eliminar elemento del carrito
 
+			for (int i = 0; i < hierba.length; i++) {
+				hierba[i] = hierba[i + 1];
+				origen[i] = origen[i + 1];
+				precio[i] = precio[i + 1];
+				
+			}
 			
+				System.out.println("carrito despues de eliminar el producto");
+				for (int i = 0; i < hierba.length; i++) {
+					if(hierba[i] != null) {
+						System.out.println(hierba[i] + origen + (precio[i] /100));
+					}
+					
+				}
 			
 			System.out.println("Usuario finaliza la compra");
 			// Codigo para finalizar la compra y que salga el total de la compra
+			
+			
 		}
 		
 		//Funciones extra que considereis necesarias
