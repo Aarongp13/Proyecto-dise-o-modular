@@ -16,7 +16,7 @@ public class activitat {
 		public static void main(String[] args) {
 			String nombre, lugar;
 			double cantidad;
-
+			
 			System.out.println("Buenos dias! Que quieres hacer hoy?");
 
 			System.out.println("Usuario selecciona buscar por nombre");
@@ -88,25 +88,66 @@ public class activitat {
 				
 			}
 
-			System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-			// Codigo para ordenar de mayor a menor precio
-
+		
+			
 			System.out.println("Usuario selecciona varios productos para comprar");
 			// Codigo para seleccionar primer producto
-			nombre1 = "Hierba de los bosques";
+			nombre = "Hierba de los bosques";
 			cantidad = 3;
 
+			
+			int precioDelProducto = 0;
+			for (int i = 0; i < hierba.length; i++) {
+				if(hierba[i].equals(nombre)); { 
+					precioDelProducto = (int) precio[i];
+					break;
+				}
+				
+			}
+			
+			int total = (int) (precioDelProducto * cantidad); 
+			
+			System.out.println("Cantidad" + cantidad + "unidades" + nombre + "precio" + total/100);
+			
 			// Codigo para seleccionar segundo producto
-			nombre1 = "El oro verde";
+			nombre = "El oro verde";
 			cantidad = 1;
+			
+			int precioDelProducto2 = 0;
+			for (int i = 0; i < hierba.length; i++) {
+				if(hierba[i].equals(nombre)); { 
+					precioDelProducto2 = (int) precio[i];
+					break;
+				}
+				
+			}
+			
+			int total2 = (int) (precioDelProducto2 * cantidad); 
+			
+			System.out.println("Cantidad" + cantidad + "unidades" + nombre + "precio" + total2/100);
 
 			// Codigo para seleccionar tercer producto
-			nombre1 = "La seta feliz";
+			nombre = "La seta feliz";
 			cantidad = 2.5;
+			
+			int precioDelProducto3 = 0;
+			for (int i = 0; i < hierba.length; i++) {
+				if(hierba[i].equals(nombre)); { 
+					precioDelProducto3 = (int) precio[i];
+					break;
+				}
+				
+			}
+			
+			int total3 = (int) (precioDelProducto3 * cantidad); 
+			
+			System.out.println("Cantidad" + cantidad + "unidades" + nombre + "precio" + total3/100);
 			
 			System.out.println("Usuario elimina el segundo elemento de su carrito");
 			// Codigo para eliminar elemento del carrito
 
+			
+			
 			System.out.println("Usuario finaliza la compra");
 			// Codigo para finalizar la compra y que salga el total de la compra
 		}
